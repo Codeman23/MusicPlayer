@@ -1,0 +1,88 @@
+.player {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &__timeControl {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  &__rangeWrap {
+    width: 100%;
+    height: 0.6rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -4px;
+  }
+
+  &__range {
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: transparent;
+    &:focus {
+      outline: none;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 16px;
+      width: 16px;
+    }
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      background: transparent;
+      border: none;
+    }
+  }
+
+  &__rangeAnimate {
+    background: #373750;
+    width: 101%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0%);
+    pointer-events: none;
+  }
+
+  &__txt {
+    padding: 0 1rem;
+    color: #71719f;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 30%;
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &__backBtn,
+  &__forvardBtn,
+  &__playBtn {
+    color: #615ad9;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #f370ff;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .player {
+    &__control {
+      width: 60%;
+    }
+    &__timeControl {
+      width: 90%;
+    }
+  }
+}

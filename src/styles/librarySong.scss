@@ -1,0 +1,27 @@
+.librarySong {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  &:hover {
+    background: #2b2341;
+  }
+  &__cover {
+    width: 30%;
+  }
+  &__desc {
+    padding-left: 1rem;
+  }
+  &__name {
+    font-size: 1rem;
+    color: #b8b8e9;
+  }
+  &__artist {
+    font-size: 0.7rem;
+    color: #8888b4;
+  }
+  &_active {
+    background: #202034;
+  }
+}

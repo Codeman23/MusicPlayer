@@ -1,0 +1,32 @@
+.navigation {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__btn {
+    background: #736be2;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background: #c85feb;
+    }
+  }
+
+  &__logo {
+    width: 100px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    &__btn {
+      z-index: 10;
+    }
+  }
+}
